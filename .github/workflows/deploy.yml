@@ -13,8 +13,8 @@ jobs:
       
     - name: Switch to root user
       run: |
-        sudo su
-        ls
+        echo $HOME
+        
         
   #  - name: Apply the manifest file
   #    run: kubectl apply -f Spring-test/.kube/manifest-test.yml
