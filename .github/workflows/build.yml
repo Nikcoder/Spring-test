@@ -25,4 +25,5 @@ jobs:
       with:
        username: ${{ secrets.DOCKER_HUB_USERNAME }}
        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-       tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spring3hibernate:v2
+       repository: nikhilopstree/javapp       
+       tags: ${{github.run_number}}
