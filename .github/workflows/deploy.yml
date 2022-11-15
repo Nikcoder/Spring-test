@@ -12,5 +12,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Deploy to my cluster
-      run: kubectl apply -f .kube/manifest-test.yml
+      run: |
+        sudo su
+        kubectl apply -f .kube/manifest-test.yml
     
