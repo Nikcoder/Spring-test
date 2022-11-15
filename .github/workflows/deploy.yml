@@ -11,8 +11,8 @@ jobs:
     - name: Get Manifest File
       uses: actions/checkout@v2
       
-    - name: Deploy to my cluster
+    - name: Switch to root user
       run: |
         sudo su
-        kubectl apply -f .kube/manifest-test.yml
+        pwd
     
