@@ -1,1 +1,16 @@
+name: 'Deploy to minikube'
 
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    name: Springapp Deploy
+    runs-on: self-hosted
+    steps:
+    
+    - name: Get Manifest File
+      uses: actions/checkout@v2
+      
+    - name: Deploy to my cluster
+      run: kubectl apply -f .kube/manifest-test.yml
+    
