@@ -13,9 +13,9 @@ jobs:
       
     - name: Switch to root user
       run: |
-        echo $HOME
+        whomai
         
         
-  #  - name: Apply the manifest file
-  #    run: kubectl apply -f Spring-test/.kube/manifest-test.yml
+    - name: Apply the manifest file
+      run: kubectl apply -f .kube/manifest-test.yml
     
