@@ -11,9 +11,9 @@ jobs:
     - name: Get Manifest File
       uses: actions/checkout@v2
       
-    - name: Switch to root user
-      run: |
-        whomai
+ #   - name: Switch to root user
+ #     run: |
+ #       whomai
         
         
     - name: Apply the manifest file
