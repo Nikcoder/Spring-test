@@ -13,12 +13,11 @@ jobs:
       
     - name: Switch to root user
       run: |
-        echo $PWD
-        whoami 
-        sudo -i
-        whoami
+        mkdir ${HOME}/.kube
+        echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
+        cat ${HOME}/.kube/config
         
         
-  #  - name: Apply the manifest file
-  #    run: kubectl apply -f .kube/manifest-test.yml
+    - name: Apply the manifest file
+      run: kubectl apply -f .kube/manifest-test.yml
     
