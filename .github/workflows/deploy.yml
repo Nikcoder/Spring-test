@@ -11,11 +11,13 @@ jobs:
     - name: Get Manifest File
       uses: actions/checkout@v2
       
- #   - name: Switch to root user
- #     run: |
- #       whomai
+    - name: Switch to root user
+      run: |
+        echo $PWD
+        whoami 
+        su - user
         
         
-    - name: Apply the manifest file
-      run: kubectl apply -f .kube/manifest-test.yml
+  #  - name: Apply the manifest file
+  #    run: kubectl apply -f .kube/manifest-test.yml
     
