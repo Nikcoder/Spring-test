@@ -15,7 +15,7 @@ jobs:
       run: |
         echo $PWD
         whoami 
-        su - user
+        sudo -i
         
         
   #  - name: Apply the manifest file
