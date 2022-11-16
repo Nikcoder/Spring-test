@@ -21,5 +21,5 @@ jobs:
         
         
     - name: Apply the manifest file
-      run: kubectl apply -f .kube/manifest-test.yml
+      run: sudo kubectl --kubeconfig /etc/kubernetes/admin.conf apply -f .kube/manifest-test.yml
     
