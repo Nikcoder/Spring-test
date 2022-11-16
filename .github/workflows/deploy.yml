@@ -11,11 +11,14 @@ jobs:
     - name: Get Manifest File
       uses: actions/checkout@v2
       
-    - name: Switch to root user
+    - name: Create Kubeconfig
       run: |
         mkdir ${HOME}/.kube
         echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
         cat ${HOME}/.kube/config
+        
+    - name: Use context
+      run: kubectl config use-context octobay-api
         
         
     - name: Apply the manifest file
