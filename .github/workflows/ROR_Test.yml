@@ -1,4 +1,4 @@
-name: Build and Test ROR env
+name: CI/CD
 on: workflow_dispatch
 jobs:
   build:
@@ -24,9 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Setup Ruby
-      - uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' 
+          ruby-version: '3.0'
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
